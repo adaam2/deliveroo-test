@@ -1,7 +1,17 @@
+@import "../css/variables";
+
 .card {
   width: 100%;
 }
 
 .img {
   width: inherit;
+  min-height: 164px;
+}
+
+@media (min-width: $mobile) {
+  .img {
+    max-width: 354px;
+    min-height: 202px;
+  }
 }

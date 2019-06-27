@@ -1,13 +1,13 @@
 import React from "react";
 import classNames from "classnames";
 
-import { Nav, Title, Container, P, Spacer, CardList } from "ui";
-import RestaurantCard from "components/RestaurantCard";
+import { Nav, Title, P, Spacer } from "ui";
 import Neighbourhood from "objects/neighbourhood";
 import AccentedHeader from "app/components/ui/AccentedHeader";
 import Button, { ButtonType } from "app/components/ui/Button";
 
 import styles from "./Home.module.scss";
+import RestaurantList from "app/components/ui/RestaurantList";
 
 const cx = classNames.bind(styles);
 
@@ -36,7 +36,7 @@ const Home: React.SFC<HomeProps> = ({ neighbourhood }) => {
             Location
           </P>
 
-          <Title fontSize={34} colour="white">
+          <Title fontWeight={600} fontSize={34} colour="white">
             {neighbourhood.title}
           </Title>
 
@@ -48,20 +48,12 @@ const Home: React.SFC<HomeProps> = ({ neighbourhood }) => {
           </Button>
         </div>
       </AccentedHeader>
-      <Spacer height={10} />
-      <Container>
-        <Spacer height={40} />
-        <P fontSize={16} colour="#828585">{neighbourhood.restaurants.length} Restaurants</P>
-        <Spacer height={40} />
 
-        <CardList>
-          {neighbourhood.restaurants.map((restaurant) => {
-            return (
-              <RestaurantCard key={restaurant.id} {...restaurant} />
-            );
-          })}
-        </CardList>
-      </Container>
+      <Spacer height={10} />
+
+      <main>
+        <RestaurantList neighbourhood={neighbourhood} />
+      </main>
     </div>
   );
 }

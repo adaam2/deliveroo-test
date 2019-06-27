@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Icon, P } from '../ui';
+import { Icon, P } from '../';
 import styles from "./AccountDetails.module.scss";
 
 export interface AccountDetailsProps {

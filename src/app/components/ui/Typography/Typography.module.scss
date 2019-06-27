@@ -1,15 +1,18 @@
 @import "../css/variables";
 
 .title, .p {
-  font-family: $font-primary;
-  font-weight: $base-font-weight;
-  font-size: $base-font-size;
   line-height: 1.25;
   margin: 2px 0;
 }
 
-.title {
+.p {
+  font-family: $font-primary;
+  font-weight: $base-font-weight;
+  font-size: $base-font-size;
+}
 
+.title {
+  font-family: $font-heading;
 }
 
 .p {

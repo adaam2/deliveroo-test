@@ -2,9 +2,13 @@ import React from "react";
 
 import HorizontalLogo from "assets/svgs/logo-horizontal.svg";
 
-const Logo = () => (
+interface LogoProps {
+  altText?: string;
+}
+
+const Logo = ({ altText = "Deliveroo" }: LogoProps) => (
   <>
-    <img src={HorizontalLogo} />
+    <img alt={altText} src={HorizontalLogo} />
   </>
 );
 

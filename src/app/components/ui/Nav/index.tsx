@@ -3,7 +3,7 @@ import React from "react";
 import { Logo, Container } from "../";
 import classNames from "classnames/bind";
 
-import AccountDetails from "app/components/AccountDetails";
+import AccountDetails from "../AccountDetails";
 import styles from "./Nav.module.scss";
 
 const cx = classNames.bind(styles);
