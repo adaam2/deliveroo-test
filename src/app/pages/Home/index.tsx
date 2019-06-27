@@ -1,9 +1,9 @@
 import React from "react";
 
-import { Nav, Title, Container, P, Spacer, CardList, ImageCard } from "ui";
+import { Nav, Title, Container, P, Spacer, CardList } from "ui";
+import RestaurantCard from "components/RestaurantCard";
 import Neighbourhood from "objects/neighbourhood";
 import AccentedHeader from "app/components/ui/AccentedHeader";
-import { FontWeight } from "app/components/ui/Typography";
 
 export interface HomeProps {
   neighbourhood: Neighbourhood;
@@ -11,7 +11,7 @@ export interface HomeProps {
 
 const Home: React.SFC<HomeProps> = ({ neighbourhood }) => {
   return (
-    <div>
+    <div className="Home">
       <Nav />
 
       <AccentedHeader>
@@ -32,11 +32,7 @@ const Home: React.SFC<HomeProps> = ({ neighbourhood }) => {
         <CardList>
           {neighbourhood.restaurants.map((restaurant) => {
             return (
-              <ImageCard altText={restaurant.name} imageUrl={restaurant.imageUrl}>
-                <Title fontWeight={FontWeight.Bold} fontSize={22} colour="#2e33333">
-                  {restaurant.name}
-                </Title>
-              </ImageCard>
+              <RestaurantCard {...restaurant} />
             );
           })}
         </CardList>
