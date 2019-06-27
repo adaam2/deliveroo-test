@@ -5,6 +5,8 @@ import { Switch } from 'react-router-dom';
 import Home from "pages/Home";
 import parser from "./server/parser";
 
+import "./App.scss";
+
 const App = () => (
   <Switch>
     <Route exact path="/" render={() => {

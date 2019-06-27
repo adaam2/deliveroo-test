@@ -1,0 +1,10 @@
+@import "./app/components/ui/css/variables";
+
+// Setup some globals
+
+body {
+  margin: 0;
+  font-family: $font-primary;
+  font-weight: $base-font-weight;
+  font-size: $base-font-size;
+}
