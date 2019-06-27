@@ -9,15 +9,19 @@ const deserializeTags = (tagInput: string[]) => {
 }
 
 const deserialize = () : Neighbourhood => {
-  return { title: data.neighborhood, restaurants: data.restaurants.map((restaurant) : Restaurant => {
-    return {
+  const restaurants = data.restaurants.map(
+    (restaurant) : Restaurant => ({
       id: restaurant.id,
       name: restaurant.name,
       imageUrl: restaurant.image,
       price: restaurant.price,
       tags: deserializeTags(restaurant.tags)
-    }
-  }) }
+  }));
+
+  return {
+    title: data.neighborhood,
+    restaurants
+  };
 }
 
 export default () : Neighbourhood => deserialize();
