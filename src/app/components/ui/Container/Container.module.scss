@@ -7,6 +7,10 @@
   width: 100%;
 }
 
+.flex {
+  display: flex;
+}
+
 @media (min-width: $mobile) {
   .containerBase {
     max-width: $mobile;

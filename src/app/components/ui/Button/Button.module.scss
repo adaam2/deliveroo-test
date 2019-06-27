@@ -1,0 +1,24 @@
+@import "../css/variables";
+
+.button {
+  border-radius: 3px;
+  min-width: 123px;
+  line-height: 1.38;
+  border: 0;
+  padding: 11px 17px;
+  max-height: 50px;
+  color: $secondary;
+  text-align: center;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: $white;
+}
+
+.secondary {
+
+}
+
