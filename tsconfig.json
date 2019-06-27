@@ -31,7 +31,9 @@
       "lib/*": ["./app/lib/*"],
       "utils/*": ["./utils/*"],
       "config/*": ["./config/*"],
-      "data/*": ["./data/*"]
+      "data/*": ["./data/*"],
+      "ui": ["./app/components/ui"],
+      "assets/*": ["./app/assets/*"]
     }
   },
   "exclude": [

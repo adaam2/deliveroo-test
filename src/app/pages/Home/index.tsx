@@ -1,14 +1,16 @@
 import React from "react";
+
+import { Nav } from "ui";
 import Neighbourhood from "objects/neighbourhood";
 
 export interface HomeProps {
-  neighbourhood: Neighbourhood;
+  neighbourhood?: Neighbourhood;
 }
 
 const Home: React.SFC<HomeProps> = ({ neighbourhood }) => {
   return (
     <div>
-      Home
+      <Nav />
     </div>
   );
 }

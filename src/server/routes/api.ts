@@ -1,11 +1,12 @@
 import express, { Request, Response } from "express";
 
-import parser from "../parser";
-
 const router = express.Router();
 
-router.get("/restaurants\.:json?", (req: Request, res: Response) => {
-  res.json({ status: 'OK', data: parser() })
+// Namespaced router: url pattern is /api/{route}
+// Define api-only routes here...
+
+router.get("/", (req: Request, res: Response) => {
+  res.json({ status: 'OK' })
 })
 
 export default router;
