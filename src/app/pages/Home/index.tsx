@@ -32,7 +32,7 @@ const Home: React.SFC<HomeProps> = ({ neighbourhood }) => {
 
       <AccentedHeader className={styles.flexContainer}>
         <div className={locationContainerClasses}>
-          <P fontSize={16} colour="black">
+          <P opacity={0.5} fontSize={16} colour="black">
             Location
           </P>
 
@@ -48,12 +48,12 @@ const Home: React.SFC<HomeProps> = ({ neighbourhood }) => {
           </Button>
         </div>
       </AccentedHeader>
-
-      <Spacer height={25} />
-
+      <Spacer height={10} />
       <Container>
-        <P fontSize={16} colour="#828585">{neighbourhood.restaurants.length} restaurants</P>
-        <Spacer height={20} />
+        <Spacer height={40} />
+        <P fontSize={16} colour="#828585">{neighbourhood.restaurants.length} Restaurants</P>
+        <Spacer height={40} />
+
         <CardList>
           {neighbourhood.restaurants.map((restaurant) => {
             return (
