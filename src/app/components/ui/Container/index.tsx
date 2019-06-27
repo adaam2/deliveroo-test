@@ -7,16 +7,17 @@ const cx = classNames.bind(styles);
 
 export interface ContainerProps {
   children: any;
-  flex?: boolean;
+  className?: string;
 }
 
-const Container: React.SFC<ContainerProps> = ({ children, flex }) => {
+const Container: React.SFC<ContainerProps> = ({ children, className = "" }) => {
   const containerClasses = () => cx({
-    [styles.containerBase]: true
+    [styles.containerBase]: true,
+    [className]: true
   });
 
   return (
-    <div className={containerClasses()} style={{ display: flex ? 'flex' : 'block' }}>
+    <div className={containerClasses()}>
       {children}
     </div>
   );

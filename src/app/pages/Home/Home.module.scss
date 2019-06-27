@@ -4,6 +4,7 @@
   display: flex;
   flex-flow: column wrap;
   width: 100%;
+  align-content: flex-start;
 }
 
 .flexItem {
@@ -18,11 +19,13 @@
 
 .flexAlignedRight {
   margin-left: auto;
+  align-self: center;
   order: 2;
 }
 
-@media (min-width: $mobile) {
+@media (max-width: $mobile) {
   .flexContainer {
+    align-content: flex-start;
     max-width: $mobile;
   }
 }

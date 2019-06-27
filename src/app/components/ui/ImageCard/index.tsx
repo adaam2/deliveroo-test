@@ -10,8 +10,8 @@ export interface ImageCardProps {
 
 const ImageCard: React.SFC<ImageCardProps> = ({ imageUrl, altText, children }) => {
   return (
-    <div>
-      <img src={imageUrl} alt={altText} />
+    <div className={styles.card}>
+      <img src={imageUrl} alt={altText} className={styles.img} />
 
       <div className={styles.cardContent}>
         {children}

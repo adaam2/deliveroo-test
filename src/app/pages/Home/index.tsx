@@ -39,6 +39,8 @@ const Home: React.SFC<HomeProps> = ({ neighbourhood }) => {
           <Title fontSize={34} colour="white">
             {neighbourhood.title}
           </Title>
+
+          <Spacer height={10} />
         </div>
         <div className={buttonContainerClasses}>
           <Button onClick={() => alert('Clicked!')} type={ButtonType.Primary}>

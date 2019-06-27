@@ -8,10 +8,10 @@ export interface AccentedHeaderProps {
   className: string;
 }
 
-const AccentedHeader: React.SFC<AccentedHeaderProps> = ({ children }) => {
+const AccentedHeader: React.SFC<AccentedHeaderProps> = ({ children, className }) => {
   return (
     <div className={styles.accentedHeader}>
-      <Container flex={true}>
+      <Container className={className}>
         {children}
       </Container>
     </div>

@@ -1,3 +1,17 @@
 .nav {
   margin: 20px 0;
+  display: flex;
+  width: 100%;
+  align-content: flex-start;
+}
+
+.flexItem {
+  display: inline-flex;
+  width: auto;
+}
+
+.flexAlignedRight {
+  margin-left: auto;
+  align-self: center;
+  order: 2;
 }
