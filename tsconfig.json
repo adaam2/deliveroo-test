@@ -42,7 +42,8 @@
     "scripts",
     "webpack",
     "jest",
-    "razzle.config.js"
+    "razzle.config.js",
+    ".storybook"
   ],
   "types": ["typePatches", "node", "webpack-env"]
 }
