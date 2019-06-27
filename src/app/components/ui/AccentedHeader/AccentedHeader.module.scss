@@ -1,0 +1,8 @@
+@import "../css/variables";
+
+.accentedHeader {
+  background-color: $primary;
+  min-height: 156px;
+  display: flex;
+  align-items: center;
+}

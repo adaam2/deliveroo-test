@@ -1,0 +1,20 @@
+@import "../css/variables";
+
+.containerBase {
+  margin: 0 auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 100%;
+}
+
+@media (min-width: $mobile) {
+  .containerBase {
+    max-width: $mobile;
+  }
+}
+
+@media (min-width: $desktop) {
+  .containerBase {
+    max-width: $desktop
+  }
+}

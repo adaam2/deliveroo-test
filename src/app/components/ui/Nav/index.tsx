@@ -1,6 +1,8 @@
 import React from "react";
 
-import { Logo } from "../";
+import { Logo, Container } from "../";
+
+import styles from "./Nav.module.scss";
 
 export interface NavProps {
 
@@ -8,9 +10,11 @@ export interface NavProps {
 
 const Nav: React.SFC<NavProps> = () => {
   return (
-    <nav>
-      <Logo />
-    </nav>
+    <Container>
+      <nav className={styles.nav}>
+        <Logo />
+      </nav>
+    </Container>
   );
 }
 
