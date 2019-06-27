@@ -3,22 +3,29 @@ import React from 'react';
 import styles from "./Typography.module.scss";
 
 interface ChildProps {
-  children: string;
+  children: any;
 }
 
-export const Title = ({ children }: ChildProps) => (
-  <h1 className={styles.title}>
+export enum FontWeight {
+  Regular = 400,
+  Bold = 600
+}
+
+interface TextProps {
+  fontSize?: number;
+  colour?: string;
+  lineHeight?: number;
+  fontWeight?: FontWeight;
+};
+
+export const Title = ({ children, fontSize, colour, lineHeight, fontWeight }: ChildProps & TextProps) => (
+  <h1 style={{ fontSize: fontSize, color: colour, lineHeight: lineHeight, fontWeight: fontWeight }} className={styles.title}>
     {children}
   </h1>
 )
 
-interface ParagraphProps {
-  fontSize?: number;
-  colour?: string;
-};
-
-export const P = ({ children, fontSize, colour }: ChildProps & ParagraphProps) => (
-  <p style={{ fontSize: fontSize, color: colour }} className={styles.p}>
+export const P = ({ children, fontSize, colour, lineHeight, fontWeight }: ChildProps & TextProps) => (
+  <p style={{ fontSize: fontSize, color: colour, lineHeight: lineHeight, fontWeight: fontWeight }} className={styles.p}>
     {children}
   </p>
 )
