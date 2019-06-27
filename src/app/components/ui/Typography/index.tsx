@@ -14,7 +14,7 @@ export const Title = ({ children }: ChildProps) => (
 
 interface ParagraphProps {
   fontSize?: number;
-  colour: string;
+  colour?: string;
 };
 
 export const P = ({ children, fontSize, colour }: ChildProps & ParagraphProps) => (
