@@ -1,3 +1,4 @@
-# deliveroo-test
+# Starting out
 
-![Image of Application](https://i.imgur.com/RQSchXL.png)
+1. `yarn install`
+2. `yarn start` ~ or ~ `docker-compose up --build`
