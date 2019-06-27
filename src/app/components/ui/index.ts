@@ -7,5 +7,6 @@ import Container from "./Container";
 import Spacer from "./Spacer";
 import CardList from "./CardList";
 import RestaurantCard from "./RestaurantCard";
+import AccentedHeader from "./AccentedHeader";
 
-export { Nav, Logo, Icon, P, Title, ImageCard, Container, Spacer, CardList, RestaurantCard };
+export { Nav, Logo, Icon, P, Title, ImageCard, Container, Spacer, CardList, RestaurantCard, AccentedHeader };

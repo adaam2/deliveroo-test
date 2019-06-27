@@ -5,7 +5,7 @@ import { Container } from 'ui';
 
 export interface AccentedHeaderProps {
   children: any;
-  className: string;
+  className?: string;
 }
 
 const AccentedHeader: React.SFC<AccentedHeaderProps> = ({ children, className }) => {
