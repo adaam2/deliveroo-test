@@ -7,7 +7,7 @@ import { FontWeight } from '../ui/Typography';
 const RestaurantCard: React.SFC<Restaurant> = ({ id, name, imageUrl, price, tags }) => {
   const tagList = tags.map(t => t.title).join(" • ");
 
-  const priceLevel = () => Array.from(Array(price)).map((i) => '£').join("");
+  const priceLevel = () => Array.from(Array(price)).map(() => '£').join("");
 
   return (
     <ImageCard altText={name} imageUrl={imageUrl}>
