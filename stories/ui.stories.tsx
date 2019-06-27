@@ -13,7 +13,7 @@ storiesOf('01 / Atoms|Title', module).add("Heading", () => (<Title>This is a tit
 storiesOf('02 / Organisms|Nav', module).add("Nav", () => <Nav />);
 storiesOf('02 / Organisms|ImageCard', module)
   .add("ImageCard", () => (
-    <ImageCard imageUrl="https://www.placecage.com/354/202">
+    <ImageCard altText="This is some alt text" imageUrl="https://www.placecage.com/354/202">
       <P>
         Hello this is some content
       </P>
