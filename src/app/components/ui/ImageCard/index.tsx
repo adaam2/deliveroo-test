@@ -5,12 +5,13 @@ import styles from "./ImageCard.module.scss";
 export interface ImageCardProps {
   imageUrl: string;
   children: any;
+  altText: string;
 }
 
-const ImageCard: React.SFC<ImageCardProps> = ({ imageUrl, children }) => {
+const ImageCard: React.SFC<ImageCardProps> = ({ imageUrl, altText, children }) => {
   return (
     <div>
-      <img src={imageUrl} />
+      <img src={imageUrl} alt={altText} />
 
       <div className={styles.cardContent}>
         {children}
