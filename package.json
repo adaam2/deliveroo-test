@@ -1,0 +1,42 @@
+{
+  "name": "my-razzle-app",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "razzle start --inspect=0.0.0.0:9229",
+    "build": "razzle build",
+    "test": "razzle test --env=jsdom",
+    "start:prod": "NODE_ENV=production node build/server.js"
+  },
+  "dependencies": {
+    "@types/react-dom": "^16.8.4",
+    "express": "^4.17.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "typed-rest-client": "^1.5.0",
+    "webpack-env": "^0.8.0",
+    "winston": "^3.2.1"
+  },
+  "peerDependencies": {
+    "tslint": "^5.18.0",
+    "webpack": "^4.35.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/node": "^12.0.10",
+    "@types/react": "^16.8.22",
+    "@types/react-router-dom": "^4.3.4",
+    "@types/webpack-env": "^1.13.9",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "razzle": "^3.0.0",
+    "razzle-plugin-typescript": "^3.0.0",
+    "typescript": "^3.5.2"
+  }
+}

@@ -1,0 +1,21 @@
+FROM node:11-slim
+
+# Set an environment variable as part of the build step that stores a reference to the directory in the container where our application's source code is stored
+ENV appdir /src
+
+# cd to the app dir
+WORKDIR $appdir
+
+# Copy the lockfile to the container target. The rationale for this is that doing the copy as a separate step means that it is cached so the build is faster on subsequent runs
+COPY package.json yarn.lock ./
+
+# Run in non interactive mode
+RUN yarn --pure-lockfile --non-interactive
+
+# Copy all of the application src to the container dir
+COPY . .
+
+# TODO: Unsure if this is that necessary given the ports are exposed via compose.
+EXPOSE 3000 3001
+
+CMD ["yarn", "start"]

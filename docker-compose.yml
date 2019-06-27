@@ -1,0 +1,23 @@
+version: "2"
+
+services:
+  client:
+    # stdin_open and tty are used for attaching the debugging in VSCode to the docker container
+    stdin_open: true
+    tty: true
+    container_name: client
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./
+    command: yarn start
+    volumes:
+      - ./:/src
+      - ./node_modules:/node_modules
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+      - "9229:9229"
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+    env_file: .env.development
