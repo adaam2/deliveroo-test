@@ -25,9 +25,7 @@ if (process.env.NODE_ENV !== 'production' && process.browser) {
 
 const App = () => (
   <Switch>
-    <Route exact path="/" render={() => {
-      return <Home neighbourhood={parser()} />
-    }} />
+    <Route exact path="/" render={() => (<Home neighbourhood={parser()} />)} />
   </Switch>
 );
 
