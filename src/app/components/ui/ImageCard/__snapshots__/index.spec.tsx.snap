@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ImageCard /> matches the snapshot 1`] = `
+<div>
+  <img
+    alt="Some alt text"
+    src="http://placehold.it/240"
+  />
+  <div>
+    <div
+      className="child"
+    >
+      Hello
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Logo /> matches the snapshot 1`] = `
+<Fragment>
+  <img
+    alt="Deliveroo"
+    src="logo-horizontal.svg"
+  />
+</Fragment>
+`;

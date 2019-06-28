@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 export interface IconProps {
-  iconKey: string; // the file name portion
   altText?: string;
 }
 
-const Icon: React.SFC<IconProps> = ({ iconKey, altText = iconKey }) => {
-  const icon = require(`assets/svgs/${iconKey}.svg`);
+const Icon: React.SFC<IconProps> = ({ altText }) => {
+  const icon = require(`assets/svgs/user.svg`);
 
   return (
     <>

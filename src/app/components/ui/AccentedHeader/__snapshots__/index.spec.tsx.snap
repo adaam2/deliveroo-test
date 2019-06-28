@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccentedHeader With a custom class name applied matches the snapshot 1`] = `
+<header>
+  <Container
+    className="myCustomCssClass"
+  >
+    <p>
+      Hello this is some text
+    </p>
+  </Container>
+</header>
+`;
+
+exports[`<AccentedHeader matches the snapshot 1`] = `
+<header>
+  <Container
+    className=""
+  >
+    <p>
+      Hello this is some text
+    </p>
+  </Container>
+</header>
+`;

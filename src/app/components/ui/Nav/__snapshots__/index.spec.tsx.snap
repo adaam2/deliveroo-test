@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Nav /> matches the snapshot 1`] = `
+<Container>
+  <nav>
+    <div
+      className="undefined"
+    >
+      <Logo />
+    </div>
+    <div
+      className="undefined"
+    >
+      <AccountDetails
+        userName="Adam Bull"
+      />
+    </div>
+  </nav>
+</Container>
+`;
