@@ -25,6 +25,7 @@ yarn test
 - React
 - Storybook
 - CSS Modules
+- CSS Grid + Flexbox
 - React AXE (for accessibillity)
 - Jest
 - Enzyme
