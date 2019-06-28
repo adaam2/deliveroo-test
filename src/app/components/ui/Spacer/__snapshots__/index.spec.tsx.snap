@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccountDetails /> With a custom height matches the snapshot 1`] = `
+<div
+  style={
+    Object {
+      "height": 100,
+    }
+  }
+/>
+`;
+
+exports[`<AccountDetails /> matches the snapshot 1`] = `
+<div
+  style={
+    Object {
+      "height": undefined,
+    }
+  }
+/>
+`;

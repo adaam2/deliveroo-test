@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccountDetails /> matches the snapshot 1`] = `
+<div>
+  <div>
+    <Icon />
+  </div>
+  <div>
+    <Component
+      colour="#2e3333"
+      fontSize={16}
+      marginLeft={8}
+    >
+      Adam Bull
+    </Component>
+  </div>
+</div>
+`;
