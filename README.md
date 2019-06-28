@@ -25,6 +25,7 @@ yarn test
 
 - TypeScript
 - React
+- Razzle (server side rendering & hot reloading for both server and client side JS)
 - Storybook
 - CSS Modules
 - CSS Grid + Flexbox
