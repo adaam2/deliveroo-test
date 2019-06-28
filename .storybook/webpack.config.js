@@ -76,7 +76,8 @@ module.exports = ({ config }) => {
 
   config.resolve.alias = {
     ui: path.resolve(__dirname, '../src/app/components/ui/'),
-    assets: path.resolve(__dirname, '../src/app/assets/')
+    assets: path.resolve(__dirname, '../src/app/assets/'),
+    pages: path.resolve(__dirname, '../src/app/pages')
   };
   return config;
 };
