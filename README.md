@@ -1,7 +1,9 @@
 # Starting out
 
-1. `yarn install`
-2. `yarn start`
+1. `git clone git@github.com:adaam2/deliveroo-test.git`
+2.  `cd deliveroo-test`
+3. `yarn install`
+4. `yarn start`
 
 # UI library
 
