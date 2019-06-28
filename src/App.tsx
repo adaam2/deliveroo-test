@@ -8,7 +8,8 @@ import Home from "pages/Home";
 import parser from "./server/parser";
 
 import "./App.scss";
-var axeConf = {
+
+const axeConf = {
   rules: [
     { id: 'heading-order', enabled: true },
     { id: 'label-title-only', enabled: true },
