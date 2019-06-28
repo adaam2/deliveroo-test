@@ -32,9 +32,3 @@ yarn test
 - React AXE (for accessibillity)
 - Jest
 - Enzyme
-
-# Preview
-
-The application looks like:
-
-![This](screencapture.png)
