@@ -9,9 +9,14 @@
   min-height: 164px;
 }
 
-@media (min-width: $mobile) {
+@media (max-width: $mobile) {
   .img {
-    max-width: 354px;
+    width: 100%;
+  }
+}
+
+@media (min-width: $mid) {
+  .img {
     min-height: 240px;
   }
 }
