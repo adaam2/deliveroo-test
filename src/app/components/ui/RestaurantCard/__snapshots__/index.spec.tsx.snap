@@ -1,102 +1,136 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Logo /> matches the snapshot 1`] = `
-<RestaurantCard
-  id="1234"
-  imageUrl="http://placehold.it/240"
-  name="Adam's restaurant"
-  price={2}
-  tags={
-    Array [
+<StaticRouter>
+  <Router
+    history={
       Object {
-        "title": "Pizza",
-      },
-      Object {
-        "title": "Burgers",
-      },
-    ]
-  }
->
-  <ImageCard
-    altText="Adam's restaurant"
-    imageUrl="http://placehold.it/240"
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+    staticContext={Object {}}
   >
-    <div>
-      <img
-        alt="Adam's restaurant"
-        src="http://placehold.it/240"
-      />
-      <div>
-        <Spacer
-          height={8}
+    <RestaurantCard
+      id="1234"
+      imageUrl="http://placehold.it/240"
+      name="Adam's restaurant"
+      price={2}
+      tags={
+        Array [
+          Object {
+            "title": "Pizza",
+          },
+          Object {
+            "title": "Burgers",
+          },
+        ]
+      }
+    >
+      <Link
+        to="/restaurants/1234"
+      >
+        <a
+          href="/restaurants/1234"
+          onClick={[Function]}
         >
-          <div
-            style={
-              Object {
-                "height": 8,
-              }
-            }
-          />
-        </Spacer>
-        <Component
-          colour="#2e33333"
-          fontSize={22}
-          fontWeight={600}
-        >
-          <h1
-            style={
-              Object {
-                "color": "#2e33333",
-                "fontSize": 22,
-                "fontWeight": 600,
-                "lineHeight": undefined,
-                "marginLeft": undefined,
-                "marginRight": undefined,
-                "opacity": undefined,
-              }
-            }
+          <ImageCard
+            altText="Adam's restaurant"
+            imageUrl="http://placehold.it/240"
           >
-            Adam's restaurant
-          </h1>
-        </Component>
-        <Spacer
-          height={5}
-        >
-          <div
-            style={
-              Object {
-                "height": 5,
-              }
-            }
-          />
-        </Spacer>
-        <Component
-          colour="#828585"
-          fontSize={14}
-          fontWeight={400}
-        >
-          <p
-            style={
-              Object {
-                "color": "#828585",
-                "fontSize": 14,
-                "fontWeight": 400,
-                "lineHeight": undefined,
-                "marginLeft": undefined,
-                "marginRight": undefined,
-                "opacity": undefined,
-              }
-            }
-          >
-            Pizza • Burgers
-             
-             • 
-             
-            ££
-          </p>
-        </Component>
-      </div>
-    </div>
-  </ImageCard>
-</RestaurantCard>
+            <div>
+              <img
+                alt="Adam's restaurant"
+                src="http://placehold.it/240"
+              />
+              <div>
+                <Spacer
+                  height={8}
+                >
+                  <div
+                    style={
+                      Object {
+                        "height": 8,
+                      }
+                    }
+                  />
+                </Spacer>
+                <Component
+                  colour="#2e33333"
+                  fontSize={22}
+                  fontWeight={600}
+                >
+                  <h1
+                    style={
+                      Object {
+                        "color": "#2e33333",
+                        "fontSize": 22,
+                        "fontWeight": 600,
+                        "lineHeight": undefined,
+                        "marginLeft": undefined,
+                        "marginRight": undefined,
+                        "opacity": undefined,
+                      }
+                    }
+                  >
+                    Adam's restaurant
+                  </h1>
+                </Component>
+                <Spacer
+                  height={5}
+                >
+                  <div
+                    style={
+                      Object {
+                        "height": 5,
+                      }
+                    }
+                  />
+                </Spacer>
+                <Component
+                  colour="#828585"
+                  fontSize={14}
+                  fontWeight={400}
+                >
+                  <p
+                    style={
+                      Object {
+                        "color": "#828585",
+                        "fontSize": 14,
+                        "fontWeight": 400,
+                        "lineHeight": undefined,
+                        "marginLeft": undefined,
+                        "marginRight": undefined,
+                        "opacity": undefined,
+                      }
+                    }
+                  >
+                    Pizza • Burgers
+                     
+                     • 
+                     
+                    ££
+                  </p>
+                </Component>
+              </div>
+            </div>
+          </ImageCard>
+        </a>
+      </Link>
+    </RestaurantCard>
+  </Router>
+</StaticRouter>
 `;

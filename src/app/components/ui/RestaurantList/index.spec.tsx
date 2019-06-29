@@ -4,6 +4,7 @@ import { mount, ReactWrapper } from "enzyme";
 import { RestaurantList } from "ui";
 import Neighbourhood from 'objects/neighbourhood';
 import RestaurantCard from '../RestaurantCard';
+import { StaticRouter as Router } from 'react-router';
 
 let wrapper: ReactWrapper;
 
@@ -31,7 +32,9 @@ function setup(
   neighbourhood: Neighbourhood
 ) {
   return mount(
-    <RestaurantList neighbourhood={neighbourhood} />
+    <Router>
+      <RestaurantList neighbourhood={neighbourhood} />
+    </Router>
   );
 };
 

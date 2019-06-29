@@ -6,7 +6,11 @@ exports[`<Nav /> matches the snapshot 1`] = `
     <div
       className="undefined"
     >
-      <Logo />
+      <Link
+        to="/"
+      >
+        <Logo />
+      </Link>
     </div>
     <div
       className="undefined"

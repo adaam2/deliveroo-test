@@ -1,4 +1,5 @@
 import React from 'react';
+import { StaticRouter as Router } from "react-router-dom";
 import { mount, ReactWrapper } from "enzyme";
 
 import { RestaurantCard, ImageCard, Title, P } from "ui";
@@ -25,7 +26,9 @@ function setup(
   restaurant: Restaurant
 ) {
   return mount(
-    <RestaurantCard {...restaurant} />
+    <Router>
+      <RestaurantCard {...restaurant} />
+    </Router>
   );
 }
 
