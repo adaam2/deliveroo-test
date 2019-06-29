@@ -4,7 +4,9 @@ import { Route } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
 import axe from "react-axe";
 
-import Home from "pages/Home";
+import HomePage from "pages/Home";
+import RestaurantPage from "pages/Restaurant";
+
 import parser from "./server/parser";
 
 import "./App.scss";
@@ -26,7 +28,8 @@ if (process.env.NODE_ENV !== 'production' && process.browser) {
 
 const App = () => (
   <Switch>
-    <Route exact path="/" render={() => (<Home neighbourhood={parser()} />)} />
+    <Route exact path="/" render={() => (<HomePage neighbourhood={parser()} />)} />
+    <Route exact path="/restaurants/:slug" render={(props) => <RestaurantPage {...props} /> } />
   </Switch>
 );
 
