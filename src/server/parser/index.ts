@@ -1,5 +1,3 @@
-import data from "../../../data/restaurants.json"
-
 import Neighbourhood from "objects/neighbourhood";
 import Restaurant from "objects/restaurant.js";
 import Tag from "objects/tag";
@@ -17,14 +15,14 @@ export const deserializeRestaurant = (restaurant: any) => ({
   tags: deserializeTags(restaurant.tags)
 });
 
-const deserialize = () : Neighbourhood => {
-  const restaurants = data.restaurants.map(
-    (restaurant) : Restaurant => deserializeRestaurant(restaurant));
+const deserialize = (json: any) : Neighbourhood => {
+  const restaurants = json.restaurants.map(
+    (restaurant: Record<string, any>) : Restaurant => deserializeRestaurant(restaurant));
 
   return {
-    title: data.neighborhood,
+    title: json.neighborhood,
     restaurants
   };
 };
 
-export default () : Neighbourhood => deserialize();
+export default (json: Record<string, any>) : Neighbourhood => deserialize(json);

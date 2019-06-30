@@ -7,6 +7,8 @@ import axe from "react-axe";
 import HomePage from "pages/Home";
 import RestaurantPage from "pages/Restaurant";
 
+import Neighbourhood from 'objects/neighbourhood.js';
+import data from "../data/restaurants.json";
 import parser from "./server/parser";
 
 import "./App.scss";
@@ -26,9 +28,11 @@ if (process.env.NODE_ENV !== 'production' && process.browser) {
   axe(React, ReactDOM, 1000, axeConf);
 }
 
+const neighbourhood: Neighbourhood = parser(data);
+
 const App = () => (
   <Switch>
-    <Route exact path="/" render={() => (<HomePage neighbourhood={parser()} />)} />
+    <Route exact path="/" render={() => (<HomePage neighbourhood={neighbourhood} />)} />
     <Route exact path="/restaurants/:slug" render={(props) => <RestaurantPage {...props} /> } />
   </Switch>
 );
