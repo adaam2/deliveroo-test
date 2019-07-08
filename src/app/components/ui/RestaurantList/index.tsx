@@ -1,21 +1,21 @@
 import React from 'react';
 
 import { Container, CardList, Spacer, P, RestaurantCard } from "ui";
-import Neighbourhood from 'objects/neighbourhood';
+import Restaurant from 'objects/restaurant';
 
 interface RestaurantListProps {
-  neighbourhood: Neighbourhood;
+  restaurants: Restaurant[];
 }
 
-const RestaurantList: React.SFC<RestaurantListProps> = ({ neighbourhood }) => {
+const RestaurantList: React.SFC<RestaurantListProps> = ({ restaurants }) => {
   return (
     <Container>
       <Spacer height={40} />
-      <P fontSize={16} colour="#828585">{neighbourhood.restaurants.length} Restaurants</P>
+      <P fontSize={16} colour="#828585">{restaurants.length} Restaurants</P>
       <Spacer height={40} />
 
       <CardList>
-        {neighbourhood.restaurants.map((restaurant) => {
+        {restaurants.map((restaurant) => {
           return (
             <RestaurantCard key={restaurant.id} {...restaurant} />
           );

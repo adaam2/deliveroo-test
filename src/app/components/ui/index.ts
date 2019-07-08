@@ -12,4 +12,6 @@ import AccentedHeader from "./AccentedHeader";
 import AccountDetails from "./AccountDetails";
 import Button, { ButtonType } from "./Button";
 
-export { Nav, Logo, Icon, P, Title, ImageCard, Container, Spacer, CardList, RestaurantCard, AccentedHeader, AccountDetails, RestaurantList, Button, ButtonType };
+import TagFilter from "./TagFilter";
+
+export { Nav, Logo, Icon, P, Title, ImageCard, Container, Spacer, CardList, RestaurantCard, AccentedHeader, AccountDetails, RestaurantList, Button, ButtonType, TagFilter };

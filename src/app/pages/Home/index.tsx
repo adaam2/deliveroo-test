@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 
-import { Nav, Title, P, Spacer, Button, AccentedHeader, RestaurantList } from "ui";
+import { Nav, Title, P, Spacer, Button, AccentedHeader, RestaurantList, TagFilter } from "ui";
 import Neighbourhood from "objects/neighbourhood";
 import { ButtonType } from "../../components/ui/Button";
 
 import styles from "./Home.module.scss";
+
+import { collectTags, filterByTag } from "../../../server/parser";
+import Tag from "objects/tag";
 
 const cx = classNames.bind(styles);
 
@@ -14,6 +17,8 @@ export interface HomeProps {
 }
 
 const Home: React.SFC<HomeProps> = ({ neighbourhood }) => {
+  const [restaurants, setRestaurants] = useState(neighbourhood.restaurants);
+
   const buttonContainerClasses = cx({
     [styles.flexAlignedRight]: true,
     [styles.flexItem]: true
@@ -22,7 +27,17 @@ const Home: React.SFC<HomeProps> = ({ neighbourhood }) => {
   const locationContainerClasses = cx({
     [styles.flexItem]: true,
     [styles.locationContainer]: true
-  })
+  });
+
+  const handleTagFilter = (tag: Tag) => {
+
+  const result = filterByTag(neighbourhood.restaurants, tag);
+    setRestaurants(result);
+  };
+
+  useEffect(() => {
+    setRestaurants(restaurants);
+  }, [restaurants])
 
   return (
     <div className="Home">
@@ -49,8 +64,10 @@ const Home: React.SFC<HomeProps> = ({ neighbourhood }) => {
 
       <Spacer height={10} />
 
+      <TagFilter handleTagFilter={handleTagFilter} tags={collectTags(neighbourhood.restaurants)} />
+
       <main>
-        <RestaurantList neighbourhood={neighbourhood} />
+        <RestaurantList restaurants={restaurants} />
       </main>
     </div>
   );
