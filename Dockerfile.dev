@@ -15,7 +15,6 @@ RUN yarn --pure-lockfile --non-interactive
 # Copy all of the application src to the container dir
 COPY . .
 
-# TODO: Unsure if this is that necessary given the ports are exposed via compose.
 EXPOSE 3000 3001
 
 CMD ["yarn", "start"]
